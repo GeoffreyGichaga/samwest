@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+.navbar-brand{
+    font-family: 'Nunito', sans-serif;   
+}
+
+.logoimg{
+    width:4%;
+}
+.Nav{
+    max-height: '100px';
+    font-family: 'Nunito', sans-serif;   
+
+}
+
+.searchicon{
+    width: 10%;
+    height: 100%;
+}
+.searchBtn{
+    padding: 5px;
+}
+
+.login-reg{
+    color: black;
+    text-decoration: none;
+}
+
+.shoppingcart{
+    width: 40%;
+}
+
+.whitelinks{
+    color: whitesmoke;
+    font-family: 'Nunito', sans-serif;   
+
+}
+.whitelinks:hover{
+    color: #ffd233;
+}
