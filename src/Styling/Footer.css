@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+.credits{
+    color: whitesmoke;
+    font-family: 'Nunito', sans-serif;   
+
+}
+
+.credits span{
+    color: #ffd233;
+}
+.credits a{
+    text-decoration: none;
+
+}
+
+.logo-name{
+    color: whitesmoke;
+    font-family: 'Nunito', sans-serif;   
+
+}
+
+.contacts-info{
+    color: whitesmoke;
+    font-family: 'Nunito', sans-serif;   
+
+}
+
+.contacts-logo{
+    width: 6%;
+}
