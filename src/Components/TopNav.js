@@ -9,7 +9,11 @@ const TopNav = () => {
 
   return (
     <>
+    {/* First NavBar */}
       <Container fluid >
+        <Navbar bg="dark">
+
+        </Navbar>
         <Navbar bg="light" expand="lg">
           <Container fluid>
             <img className='logoimg' src={logo} alt='Logo'/>
@@ -38,8 +42,12 @@ const TopNav = () => {
           </Container>
         </Navbar>
       </Container>
+    {/* End of First NavBar */}
 
 
+
+
+      {/* Second Navbar */}
       <Container fluid className=' bg-black'>
         <Row>
 
@@ -69,9 +77,10 @@ const TopNav = () => {
           </Col>
         </Row>
 
-       
-
+    
       </Container>
+      {/* End of Second Navbar */}
+
 
     
 
