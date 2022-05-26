@@ -5,8 +5,14 @@ import shoppingcart from '../assets/shoppingcart.png'
 import '../Styling/Navbars.css'
 import { SearchIcon, UserIcon } from './icons'
 import SecondNav from './SecondNav'
+import loginpage from '../Pages/Login'
+import { useNavigate } from 'react-router-dom'
+
 
 const TopNav = () => {
+  
+  
+
 
   return (
     <>
@@ -42,7 +48,7 @@ const TopNav = () => {
                     <div className='d-flex justify-content-end'>
                       <UserIcon/>
                 
-                      <a href='#home' className='login-reg ms-2 '>Login / Register</a>
+                      <a  href='#home' className='login-reg ms-2 '>Login / Register</a>
                     </div>
                     
 

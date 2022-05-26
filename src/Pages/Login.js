@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Card, Col, Row,Form,Button } from 'react-bootstrap'
 import '../Styling/Login.css'
 import logisticslogo from '../assets/logisticslogo.png'
 
 const Login = () => {
+
+    const [email,setEmail] = useState('')
+    const [paswd,setPaswd] = useState('')
+
+  
+
+      function handleSubmit(event){
+        event.preventDefault()
+        
+      }
+    
+
+
+    const registerUsers = async ()=>{
+        try{
+
+        const user = await createUserWithEmailAndPassword(auth,userEmail,userPaswd)
+        } catch(error){
+            alert(error.message);
+        }
+
+    }
+
+
   return (
     <Container className=''>
         <Row className='d-flex justify-content-center mt-lg-5 m-lg-5'>

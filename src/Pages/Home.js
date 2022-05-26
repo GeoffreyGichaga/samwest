@@ -24,9 +24,9 @@ import SideMenu from '../Components/SideMenu';
   return (
     <>
 
-    {/* <TopNav/>
+    <TopNav/>
     <SecondNav/>
-    <CarouselItem/>
+    {/* <CarouselItem/>
     
 
     
