@@ -96,7 +96,7 @@ const Login = () => {
                     <Form.Text  className="error ">
                         {error} 
                             
-                        </Form.Text>
+                    </Form.Text>
                     
                     <div className='d-flex justify-content-center mt-4 mt-lg-4'>
                         <Button onClick={loginUser} id='loginButton' className='login-btn' variant="primary" type="submit">

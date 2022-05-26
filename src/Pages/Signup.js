@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Container,Col, Row,Form,Button } from 'react-bootstrap'
+import { Container,Col, Row,Form,Button,Alert } from 'react-bootstrap'
 import '../Styling/Signup.css'
 import logisticslogo2 from '../assets/logisticslogo2.png'
-import {createUserWithEmailAndPassword,onAuthStateChanged} from 'firebase/auth'
+import {AuthErrorCodes, createUserWithEmailAndPassword,onAuthStateChanged} from 'firebase/auth'
 import {auth} from './Firebase'
 import { BrowserRouter as Route, Switch, Router } from 'react-router-dom'
 
@@ -11,6 +11,8 @@ const Signup = () => {
     // const [userPhone,setUserPhone] = useState('')
     const [userEmail,setUserEmail] = useState('')
     const [userPaswd,setUserPaswd] = useState('')
+
+    const [error,setError] = useState('')
 
   
 
@@ -27,6 +29,31 @@ const Signup = () => {
         const user = await createUserWithEmailAndPassword(auth,userEmail,userPaswd)
         } catch(error){
             alert(error.message);
+        }
+
+    }
+
+    function displayError(error){
+        if(error.code ===AuthErrorCodes.INVALID_PASSWORD)
+        { 
+            const alert = ()=>{return(
+                <Alert variant='danger'>
+                    You have entered Wrong Password!!
+
+                </Alert>
+            )}
+             setError(alert)
+
+        } else if(error.code ===AuthErrorCodes.INVALID_EMAIL)
+        {
+          const alert = ()=>{return(
+              <Alert variant='danger'>
+                  You have entered Wrong Email!!
+
+              </Alert>
+          )}
+           setError(alert)
+
         }
 
     }
@@ -70,7 +97,11 @@ const Signup = () => {
                         <Form.Label  className='login-heads'>Password</Form.Label>
                         <Form.Control onChange={(event)=>{setUserPaswd(event.target.value)}} id='input4' name='paswd' className='login-text'  type="password" placeholder="Password" />
                     </Form.Group>
-                    <a id='small-text2' className='small-text2' href='/signup'>Have an Account Already? Login</a>
+                    <a id='small-text2' className='small-text2' href='/signup'>Have an Account Already? Login</a> <br/>
+                    <Form.Text  className="error ">
+                        {error} 
+                            
+                    </Form.Text>
                     
                     <div className='d-flex justify-content-center mt-4 mt-lg-4'>
                         <Button onClick={registerUsers} id='signupButton'  className='login-btn' variant="primary" type="submit">
