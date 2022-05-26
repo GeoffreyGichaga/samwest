@@ -39,7 +39,7 @@ const Login = () => {
                         <Form.Label className='login-text'>Password</Form.Label>
                         <Form.Control className='login-text' type="password" placeholder="Password" />
                     </Form.Group>
-                    <a id='small-text2' className='small-text2 text-end' href='/signup'>Not registered yet? Create an Account</a>
+                    <a id='small-text2' className='small-text2' href='/signup'>Not registered yet? Create an Account</a>
                     
                     <div className='d-flex justify-content-center'>
                         <Button id='loginButton' className='login-btn' variant="primary" type="submit">
