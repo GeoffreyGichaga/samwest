@@ -14,8 +14,14 @@
 }
 
 .login-text{
-    font-family: 'Nunito', sans-serif;   
-    
+    font-family: 'Nunito', sans-serif;  
+    color: black;   
+}
+#input1,#input2{
+    border: none;
+    border-radius: 1px;
+    border-bottom: 1px solid black;
+    font-size: 13px;
 }
 .small-text{
     font-size: 10px;
