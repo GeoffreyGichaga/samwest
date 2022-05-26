@@ -12,6 +12,11 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+.site-Name{
+    color: #ffd233;
+    font-family: 'Nunito', sans-serif;
+
+}
 
 .login-text{
     font-family: 'Nunito', sans-serif;  
@@ -55,7 +60,7 @@
 
 }
 
-#loginButton{
+#signupButton{
     font-family: 'Nunito', sans-serif;  
     background-color: #ffd233; 
     color: black;
@@ -64,8 +69,9 @@
 
 
 }
-#loginButton:hover{
-    background-color: #ffd233;
-    color: black;
+#signupButton:hover{
+    background-color: black;
+    color: #ffd233;
+    transition: 1s;
 
 }

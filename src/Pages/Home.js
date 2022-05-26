@@ -27,7 +27,7 @@ import Login from './Login';
     <Brands/>
     <Footer/> */}
     {/* <Cart/> */}
-    <Login/>
+    <Signup/>
     
     
 

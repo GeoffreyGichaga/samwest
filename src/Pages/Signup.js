@@ -14,7 +14,7 @@ const Login = () => {
                 </div>
 
                 <div className='d-flex justify-content-center  mb-lg-5'>
-                    <h3 className='login-text'>SamWest Distributors</h3>
+                    <h3 className='site-Name'>SamWest Distributors</h3>
                 </div>
                 
 
@@ -47,8 +47,8 @@ const Login = () => {
                     <a id='small-text2' className='small-text2' href='/signup'>Have an Account Already? Login</a>
                     
                     <div className='d-flex justify-content-center mt-4 mt-lg-4'>
-                        <Button id='loginButton' className='login-btn' variant="primary" type="submit">
-                            Submit
+                        <Button id='signupButton' className='login-btn' variant="primary" type="submit">
+                            SignUp
                         </Button>
                     </div>
                 </Form>
