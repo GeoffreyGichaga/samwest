@@ -23,23 +23,28 @@ const Login = () => {
             </Col>
             
             <Col className='mt-lg-5'>
-                <div className='mt-5'>
-                    <h4 className='login-main text-center '>Login</h4>
+                <div className=' mt-3 mt-lg-0'>
+                    <h4 className='login-main text-center '>Register Your Account</h4>
                 </div>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label className='login-text'>Username</Form.Label>
+                        <Form.Label className='login-heads'>Username</Form.Label>
                         <Form.Control className='login-text' type="email" placeholder="Enter email" />
-                        <Form.Text className="small-text text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
+
+                        <Form.Label className='login-heads'>Username</Form.Label>
+                        <Form.Control className='login-text' type="email" placeholder="Enter email" />
+
+                        <Form.Label className='login-heads'>Username</Form.Label>
+                        <Form.Control className='login-text' type="email" placeholder="Enter email" />
+
+                        
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label className='login-heads'>Password</Form.Label>
                         <Form.Control className='login-text' type="password" placeholder="Password" />
                     </Form.Group>
-                    <a id='small-text2' className='small-text2' href='/signup'>Not registered yet? Create an Account</a>
+                    <a id='small-text2' className='small-text2' href='/signup'>Have an Account Already? Login</a>
                     
                     <div className='d-flex justify-content-center mt-4 mt-lg-4'>
                         <Button id='loginButton' className='login-btn' variant="primary" type="submit">

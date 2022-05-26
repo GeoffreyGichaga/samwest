@@ -43,7 +43,7 @@ const Login = () => {
                     
                     <div className='d-flex justify-content-center mt-4 mt-lg-4'>
                         <Button id='loginButton' className='login-btn' variant="primary" type="submit">
-                            Submit
+                            Login
                         </Button>
                     </div>
                 </Form>
