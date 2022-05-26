@@ -1,3 +1,4 @@
+import React from 'react'
 import pembe from '../assets/pembe.jpg'
 import shop from '../assets/shoppingcart.png'
 import heart1 from '../assets/heart1.png'
@@ -8,7 +9,7 @@ import question from '../assets/question.png'
 
 
 
-const products = [
+ const products = [
     
     {
         id:1,
@@ -73,4 +74,5 @@ const sideNavData = [
     },
     
 ]
+
 export default sideNavData ;

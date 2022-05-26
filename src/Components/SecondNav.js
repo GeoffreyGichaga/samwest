@@ -19,10 +19,10 @@ const SecondNav = ({openSideNav}) => {
           <div >
           <Button onClick={handleShow} id='sideNav'>
             <NavIcon/>
+            Menu
           </Button>
 
           </div>
-          <Nav.Link className='whitelinks' href="/home">Menu</Nav.Link>
 
         </Nav.Item>
 
@@ -31,7 +31,7 @@ const SecondNav = ({openSideNav}) => {
 
       <Offcanvas id='offcanvas' show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Menu</Offcanvas.Title>
+          <Offcanvas.Title>Categories</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">

@@ -10,6 +10,9 @@
 }
 #sideNav{
     background-color: transparent;
+    color: #ffd233;
+    font-family: 'Nunito', sans-serif;   
+
 }
 #sideNav:focus{
     box-shadow: none;

@@ -17,7 +17,7 @@ const CarouselItem = ()=>{
                             alt="First slide"
                             />
                             <Carousel.Caption>
-                            <h3 className='carousel-caption '>First slide label</h3>
+                            <h3 className='carousel-caption text-center'>Household Applicances</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -28,7 +28,7 @@ const CarouselItem = ()=>{
                             />
 
                             <Carousel.Caption>
-                            <h3 className='carousel-caption '>Second slide label</h3>
+                            <h3 className='carousel-caption text-center'>Drinks</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
                         

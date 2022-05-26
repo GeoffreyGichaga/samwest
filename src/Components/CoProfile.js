@@ -8,12 +8,12 @@ import '../Styling/CoProfile.css'
 
 const CoProfile = () => {
   return (
-    <Container className='mt-4'>
-        <CardGroup>
-            <Card>
+    <Container  className='mt-4'>
+        <CardGroup >
+            <Card >
                 <Card.Body>
-                    <Row className='d-flex '>
-                        <Col className='col-3 mt-3'>
+                    <Row  className='d-flex'>
+                        <Col className='col-3  mt-3'>
                             <img className='profileicons' src={coin} alt='E-Cash'/>
                         </Col>
                         

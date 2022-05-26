@@ -30,13 +30,13 @@ import SideMenu from '../Components/SideMenu';
     
 
     
-    {/* <CoProfile/> */}
-    {/* <Products/> */}
-    {/* <div className='mt-5 ms-5'>
+    <CoProfile/> 
+    {/* <Products/>  */}
+    <div className='mt-5 ms-5'>
             <h3>Top Brands</h3>
         </div>
     <Brands/>
-    <Footer/> */}
+    <Footer/>
     {/* <Cart/> */}
     {/* <UserDash/> */}
     
