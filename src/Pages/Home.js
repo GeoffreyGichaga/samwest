@@ -6,6 +6,9 @@ import Item from '../Components/Item';
 import Products from '../Components/Products';
 import TopNav from '../Components/TopNav';
 import Footer from '../Components/Footer'
+import Cart from './Cart';
+import Signup from './Signup';
+import Login from './Login';
 
 
 
@@ -13,7 +16,8 @@ import Footer from '../Components/Footer'
   return (
     <>
 
-    <TopNav/>
+    {/* <TopNav/>
+    <SecondNav/>
     <CarouselItem/>
     <CoProfile/>
     <Products/>
@@ -21,7 +25,9 @@ import Footer from '../Components/Footer'
             <h3>Top Brands</h3>
         </div>
     <Brands/>
-    <Footer/>
+    <Footer/> */}
+    {/* <Cart/> */}
+    <Login/>
     
     
 
