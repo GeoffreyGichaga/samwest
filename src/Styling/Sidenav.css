@@ -8,6 +8,12 @@
 .sidebar-menu-nav-link{
     color: whitesmoke;
 }
+#sideNav{
+    background-color: transparent;
+}
+#sideNav:focus{
+    box-shadow: none;
+}
 
 .menu-icons{
     width: 1.3rem;

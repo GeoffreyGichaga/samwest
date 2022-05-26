@@ -1,33 +1,18 @@
 import React, { useState } from 'react'
-import { Container,Nav, Row, Col, Navbar, Button, FormControl, Form,Tab,Offcanvas } from 'react-bootstrap'
-import shoppingcart from '../assets/shoppingcart.png'
-import { NavIcon, SearchIcon } from './icons'
+import { Button,Col, Offcanvas,Row,Nav,Tab } from 'react-bootstrap';
+import '../Styling/SideMenu.css'
 
 
-
-const SecondNav = ({openSideNav}) => {
-  const [show, setShow] = useState(false);
+const SideMenu = () => {
+    const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-  
-  
   return (
     <>
-      <Navbar  bg='black'>
-        <Nav.Item className='d-flex'>
-          <div >
-          <Button onClick={handleShow} id='sideNav'>
-            <NavIcon/>
-          </Button>
-
-          </div>
-          <Nav.Link className='whitelinks' href="/home">Menu</Nav.Link>
-
-        </Nav.Item>
-
-
-        
+      <Button variant="primary" onClick={handleShow}>
+        Launch
+      </Button>
 
       <Offcanvas id='offcanvas' show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
@@ -67,78 +52,8 @@ const SecondNav = ({openSideNav}) => {
             </Tab.Container>
         </Offcanvas.Body>
       </Offcanvas>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <Nav.Item>
-          <Nav.Link className='whitelinks' href="/home">Home</Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item>
-          <Nav.Link className='whitelinks' href="/home">About </Nav.Link>
-        </Nav.Item>
-
-
-        <Nav.Item>
-          <Nav.Link className='whitelinks' href="/home">Contact</Nav.Link>
-        </Nav.Item>
-
-        
-      </Navbar>
-
-
-
-
-
-    {/* <Navbar bg='light'  expand="lg">
-          <Container fluid>
-            
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
-              <Nav className="Nav me-auto my-2 my-lg-0 ms-lg-auto d-flex justify-content-center"> 
-                    
-
-
-
-              </Nav>
-                
-
-              
-
-            </Navbar.Collapse>
-          </Container>
-        </Navbar> */}
-
-</>
-
-
-
-
-
+    </>
   )
 }
 
-export default SecondNav
+export default SideMenu

@@ -11,13 +11,18 @@
     font-family: 'Nunito', sans-serif;   
 
 }
+.search-bar:focus{
+    box-shadow: none;
+
+}
 
 .searchicon{
-    width: 10%;
+    width: 3%;
     height: 100%;
 }
-.searchBtn{
-    padding: 5px;
+#searchBtn:focus{
+    box-shadow: none;
+
 }
 
 .login-reg{
@@ -26,7 +31,8 @@
 }
 
 .shoppingcart{
-    width: 40%;
+    width: 1%;
+    /* height: 25%; */
 }
 
 .whitelinks{
@@ -36,4 +42,11 @@
 }
 .whitelinks:hover{
     color: #ffd233;
+}
+
+.cart{
+    font-family: 'Nunito', sans-serif; 
+    color: whitesmoke;  
+
+
 }

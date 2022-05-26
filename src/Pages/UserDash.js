@@ -5,6 +5,7 @@ import TopNav from '../Components/TopNav'
 import shoppingcart from '../assets/shoppingcart.png'
 import Footer from '../Components/Footer'
 import '../Styling/Cart.css'
+import Login from './Signup'
 
 
 const Cart = () => {
@@ -46,7 +47,7 @@ const Cart = () => {
 
 
                <Col className='justify-content-start'>
-                Hello
+                   
                </Col>
 
             </Row>
