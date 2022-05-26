@@ -54,3 +54,10 @@
     color: black;
 
 }
+
+.error{
+    color: rgb(233, 30, 30);
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;  
+
+}

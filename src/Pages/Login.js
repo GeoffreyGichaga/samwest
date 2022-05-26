@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
-import { Container, Card, Col, Row,Form,Button } from 'react-bootstrap'
+import { Container, Card, Col, Row,Form,Button, Alert } from 'react-bootstrap'
 import '../Styling/Login.css'
 import logisticslogo from '../assets/logisticslogo.png'
+import { AuthErrorCodes, signInWithEmailAndPassword } from 'firebase/auth'
+import {auth} from './Firebase'
 
 const Login = () => {
 
     const [email,setEmail] = useState('')
     const [paswd,setPaswd] = useState('')
+
+    const [error,setError] = useState('')
 
   
 
@@ -14,15 +18,41 @@ const Login = () => {
         event.preventDefault()
         
       }
+
+      function displayError(error){
+          if(error.code ===AuthErrorCodes.INVALID_PASSWORD)
+          { 
+              const alert = ()=>{return(
+                  <Alert variant='danger'>
+                      You have entered Wrong Password!!
+
+                  </Alert>
+              )}
+               setError(alert)
+
+          } else if(error.code ===AuthErrorCodes.INVALID_EMAIL)
+          {
+            const alert = ()=>{return(
+                <Alert variant='danger'>
+                    You have entered Wrong Email!!
+
+                </Alert>
+            )}
+             setError(alert)
+
+          }
+
+      }
     
 
 
-    const registerUsers = async ()=>{
+    const loginUser = async ()=>{
         try{
 
-        const user = await createUserWithEmailAndPassword(auth,userEmail,userPaswd)
+        const user = await signInWithEmailAndPassword(auth,email,paswd)
+        console.log(user);
         } catch(error){
-            alert(error.message);
+            displayError(error);
         }
 
     }
@@ -50,23 +80,26 @@ const Login = () => {
                 <div className='mt-5'>
                     <h4 className='login-main text-center '>Login</h4>
                 </div>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label className='login-text'>Username</Form.Label>
-                        <Form.Control id='input1' className='login-text' type="email" placeholder="Enter email" />
-                        <Form.Text className="small-text text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
+                        <Form.Control onChange={(event)=>{setEmail(event.target.value)}} id='input1' className='login-text' type="email" placeholder="Enter email" />
+                        
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label className='login-text'>Password</Form.Label>
-                        <Form.Control id='input2' className='login-text' type="password" placeholder="Password" />
+                        <Form.Control onChange={(event)=>{setPaswd(event.target.value)}} id='input2' className='login-text' type="password" placeholder="Password" />
                     </Form.Group>
-                    <a id='small-text2' className='small-text2' href='/signup'>Not registered yet? Create an Account</a>
+                    <a id='small-text2' className='small-text2' href='/signup'>Not registered yet? Create an Account</a> <br/>
+
+                    <Form.Text  className="error ">
+                        {error} 
+                            
+                        </Form.Text>
                     
                     <div className='d-flex justify-content-center mt-4 mt-lg-4'>
-                        <Button id='loginButton' className='login-btn' variant="primary" type="submit">
+                        <Button onClick={loginUser} id='loginButton' className='login-btn' variant="primary" type="submit">
                             Login
                         </Button>
                     </div>

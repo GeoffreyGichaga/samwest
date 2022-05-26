@@ -26,21 +26,21 @@ import SideMenu from '../Components/SideMenu';
 
     <TopNav/>
     <SecondNav/>
-    {/* <CarouselItem/>
+    <CarouselItem/>
     
 
     
-    <CoProfile/>  */}
+    <CoProfile/> 
     {/* <Products/>  */}
     
-    {/* <div className='mt-5 ms-5'>
+    <div className='mt-5 ms-5'>
             <h3>Top Brands</h3>
         </div>
     <Brands/>
-    <Footer/> */}
+    <Footer/>
     {/* <Cart/> */}
     {/* <UserDash/> */}
-    <Signup/>
+    {/* <Login/> */}
     
     
 
