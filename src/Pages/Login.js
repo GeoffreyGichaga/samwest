@@ -41,7 +41,7 @@ const Login = () => {
                     </Form.Group>
                     <a id='small-text2' className='small-text2' href='/signup'>Not registered yet? Create an Account</a>
                     
-                    <div className='d-flex justify-content-center'>
+                    <div className='d-flex justify-content-center mt-4 mt-lg-4'>
                         <Button id='loginButton' className='login-btn' variant="primary" type="submit">
                             Submit
                         </Button>
