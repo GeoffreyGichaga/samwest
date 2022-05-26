@@ -17,10 +17,23 @@
     font-family: 'Nunito', sans-serif;  
     color: #ffd233; 
     
+    
+}
+#input1,#input2,#input3,#input4{
+    border: none;
+    border-radius: 1px;
+    border-bottom: 1px solid black;
+    font-size: 13px;
+
+}
+#input1,#input2,#input3,#input4:focus{
+    box-shadow: none;
+    
 }
 .login-heads{
     color: black;
-    font-family: 'Nunito', sans-serif;  
+    font-family: 'Nunito', sans-serif; 
+    font-size: 14px; 
 
 
 }
@@ -44,8 +57,9 @@
 
 #loginButton{
     font-family: 'Nunito', sans-serif;  
-    background-color: black; 
-    color: #ffd233;
+    background-color: #ffd233; 
+    color: black;
+    font-weight: bold;
     border:none;
 
 

@@ -28,21 +28,21 @@ const Login = () => {
                 </div>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label className='login-heads'>Username</Form.Label>
-                        <Form.Control className='login-text' type="email" placeholder="Enter email" />
+                        <Form.Label className='login-heads'>FullNames</Form.Label>
+                        <Form.Control id='input1' className='login-text' type="text" placeholder="Enter Your names" />
+
+                        <Form.Label className='login-heads'>Phonenumber</Form.Label>
+                        <Form.Control id='input2' className='login-text' type="text" placeholder="Enter Phonenumber" />
 
                         <Form.Label className='login-heads'>Username</Form.Label>
-                        <Form.Control className='login-text' type="email" placeholder="Enter email" />
-
-                        <Form.Label className='login-heads'>Username</Form.Label>
-                        <Form.Control className='login-text' type="email" placeholder="Enter email" />
+                        <Form.Control id='input3' className='login-text' type="email" placeholder="Enter email" />
 
                         
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label className='login-heads'>Password</Form.Label>
-                        <Form.Control className='login-text' type="password" placeholder="Password" />
+                        <Form.Control id='input4' className='login-text' type="password" placeholder="Password" />
                     </Form.Group>
                     <a id='small-text2' className='small-text2' href='/signup'>Have an Account Already? Login</a>
                     
