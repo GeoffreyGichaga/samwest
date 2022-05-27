@@ -19,7 +19,7 @@ const Item = ({picture,productName,price}) => {
   
     }
   return (
-        <Card className='card card mt-5 ms-5'>
+        <Card className='card col-sm-12  card mt-5 ms-5'>
             <Card.Img className='item-images ms-5 mt-3 w-50' variant="top" src={picture} />
             <Card.Body>
                 <Card.Title className='card-text1 mt-3'>{productName}</Card.Title>

@@ -43,6 +43,7 @@ const Products = () => {
           return (
             <CardGroup>
             <Item picture={product.picture} productName={product.productName} price={product.price}/>
+            
 
 
           </CardGroup>
