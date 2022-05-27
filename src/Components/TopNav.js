@@ -5,11 +5,13 @@ import shoppingcart from '../assets/shoppingcart.png'
 import '../Styling/Navbars.css'
 import { SearchIcon, UserIcon } from './icons'
 import SecondNav from './SecondNav'
-import loginpage from '../Pages/Login'
-import { useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 const TopNav = () => {
+  
+    
+
   
   
 
@@ -45,11 +47,15 @@ const TopNav = () => {
                       </div>
                     </Form>
 
-                    <div className='d-flex justify-content-end'>
-                      <UserIcon/>
+                    <div className=' ms-5 d-flex justify-content-end'>
+
+                    <NavLink className='login-reg' to='/login' exact>
+                      Login / Register
+                    </NavLink>
                 
-                      <a  href='#home' className='login-reg ms-2 '>Login / Register</a>
                     </div>
+
+                    
                     
 
 

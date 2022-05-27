@@ -1,16 +1,15 @@
 import './App.css';
 import Home from './Pages/Home';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import Loginpage from './Pages/Login'
+
 
 function App() {
   return (
     <>
+   
     <Home/>
+      
+      
     </>
   );
 }

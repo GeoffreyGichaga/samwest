@@ -17,6 +17,10 @@ import lemon from '../assets/lemon.png'
 import '../Styling/Home.css'
 import SideNav from '../Components/SideNav';
 import SideMenu from '../Components/SideMenu';
+import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
+import Loginpage from '../Pages/Login'
+
+
 
 
 
@@ -25,22 +29,32 @@ import SideMenu from '../Components/SideMenu';
     <>
 
     <TopNav/>
+    
     <SecondNav/>
     <CarouselItem/>
     
 
     
     <CoProfile/> 
-    {/* <Products/>  */}
+    <Products/> 
     
     <div className='mt-5 ms-5'>
             <h3>Top Brands</h3>
         </div>
     <Brands/>
     <Footer/>
-    {/* <Cart/> */}
+    
+    
+
+
+
+    {/* <Signup/> */}
+
+    {/* <Loginpage/> */}
+
+
+
     {/* <UserDash/> */}
-    {/* <Login/> */}
     
     
 

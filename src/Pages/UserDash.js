@@ -1,14 +1,25 @@
 import React from 'react'
-import { Container,Row,Col,Nav } from 'react-bootstrap'
+import { Container,Row,Col,Nav,CardGroup } from 'react-bootstrap'
 import SideNav from '../Components/SideNav'
 import TopNav from '../Components/TopNav'
 import shoppingcart from '../assets/shoppingcart.png'
 import Footer from '../Components/Footer'
 import '../Styling/Cart.css'
 import Login from './Signup'
+import pembe from '../assets/pembe.jpg'
+import Item from '../Components/Item'
+
 
 
 const Cart = () => {
+
+
+    const product = {
+        id:1,
+        picture:pembe,
+        productName:"Pembe Maize Flour - 2Kg",
+        price:1200
+    }
   return (
       <>
       <TopNav/>
@@ -46,7 +57,12 @@ const Cart = () => {
                 </Col>
 
 
-               <Col className='justify-content-start'>
+               <Col lg={3} >
+               <CardGroup>
+                    <Item picture={product.picture} productName={product.productName} price={product.price}/>
+
+
+                </CardGroup>
                    
                </Col>
 

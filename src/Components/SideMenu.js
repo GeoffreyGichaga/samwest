@@ -24,19 +24,19 @@ const SideMenu = () => {
                     <Col sm={3} lg={12}>
                     <Nav variant="pills" className="flex-column">
                         <Nav.Item>
-                            <Nav.Link id='side-links' eventKey="first">Food</Nav.Link>
+                            <Nav.Link id='side-links' eventKey="first">Electronics</Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link className='side-links' eventKey="second">Drinks</Nav.Link>
+                            <Nav.Link className='side-links' eventKey="second">Jewelery</Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link className='side-links' eventKey="third">Personal Care</Nav.Link>
+                            <Nav.Link className='side-links' eventKey="third">Men's clothing</Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link className='side-links' eventKey="fourth">Detergents</Nav.Link>
+                            <Nav.Link className='side-links' eventKey="fourth">Men's clothing</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     </Col>
