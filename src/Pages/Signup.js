@@ -4,8 +4,12 @@ import '../Styling/Signup.css'
 import logisticslogo2 from '../assets/logisticslogo2.png'
 import {AuthErrorCodes, createUserWithEmailAndPassword} from 'firebase/auth'
 import {auth} from './Firebase'
+import { Link, Routes, useNavigate } from 'react-router-dom'
+import Login from './Login'
 
 const Signup = () => {
+    const navigate = useNavigate()
+
     // const [userFullname,setUserFullname] = useState('')
     // const [userPhone,setUserPhone] = useState('')
     const [userEmail,setUserEmail] = useState('')
@@ -26,9 +30,13 @@ const Signup = () => {
         try{
 
         const user = await createUserWithEmailAndPassword(auth,userEmail,userPaswd)
+        .then((response)=>{
+            navigate('/home')
+
+        })
         console.log(user);
         } catch(error){
-            alert(error.message);
+            displayError(error);
             
         }
 
@@ -61,7 +69,10 @@ const Signup = () => {
 
     }
   return (
+
     <Container className=''>
+                <Routes exact path='/login' element={<Login/>}/>
+
         <Row className='d-flex justify-content-center mt-lg-5 m-lg-5'>
             <Col sm={12} md={6} lg={6} className='black-side mt-lg-5 '>
                 <div className='d-flex justify-content-center mt-5 '>
@@ -100,7 +111,7 @@ const Signup = () => {
                         <Form.Label  className='login-heads'>Password</Form.Label>
                         <Form.Control onChange={(event)=>{setUserPaswd(event.target.value)}} id='input4' name='paswd' className='login-text'  type="password" placeholder="Password" />
                     </Form.Group>
-                    <a id='small-text2' className='small-text2' href='/signup'>Have an Account Already? Login</a> <br/>
+                    <Link to='/login' id='small-text2' className='small-text2' href='/signup'>Have an Account Already? Login</Link> <br/>
                     <Form.Text  className="error ">
                         {error} 
                             

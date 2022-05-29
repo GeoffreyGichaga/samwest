@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Brands from '../Components/Brands';
 // import CarouselItem from '../Components/Carousel';
 import CoProfile from '../Components/CoProfile';
@@ -8,6 +8,8 @@ import Footer from '../Components/Footer'
 
 import CarouselItem from '../Components/Carousel'
 import SecondNav from '../Components/SecondNav';
+import { useNavigate } from 'react-router-dom';
+import { Alert } from 'react-bootstrap';
 
 
 
@@ -15,6 +17,26 @@ import SecondNav from '../Components/SecondNav';
 
 
  const Home = () => {
+   const navigate = useNavigate()
+
+   function logout(){
+     sessionStorage.removeItem('Auth Token')
+   }
+   useEffect(()=>{
+     let authToken = sessionStorage.getItem('Auth Token')
+     if(authToken){
+      navigate('/home')
+
+     }else {
+      <Alert variant='danger'>
+      You have entered Wrong Details!!
+
+      </Alert>
+
+     }
+     
+
+   },[])
   return (
     <>
 

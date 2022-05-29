@@ -13,16 +13,11 @@
     font-weight: bold;
 }
 
-.login-text{
+#login-text1,#login-text2{
     font-family: 'Nunito', sans-serif;  
     color: black;   
 }
-#input1,#input2{
-    border: none;
-    border-radius: 1px;
-    border-bottom: 1px solid black;
-    font-size: 13px;
-}
+
 .small-text{
     font-size: 10px;
     font-family: 'Nunito', sans-serif;   
@@ -60,4 +55,8 @@
     font-size: 15px;
     font-family: 'Nunito', sans-serif;  
 
+}
+
+form:focus{
+    box-shadow: none;
 }

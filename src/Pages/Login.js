@@ -3,9 +3,16 @@ import { Container, Col, Row,Form,Button, Alert } from 'react-bootstrap'
 import '../Styling/Login.css'
 import logisticslogo from '../assets/logisticslogo.png'
 import { AuthErrorCodes, signInWithEmailAndPassword } from 'firebase/auth'
-import {auth} from './Firebase'
+import {auth,fire} from './Firebase'
+import { Link, Route, Routes, useNavigate } from 'react-router-dom'
+import Signup from './Signup'
+import Home from './Home'
 
 const Login = () => {
+    const navigate = useNavigate()
+    
+
+
 
     const [email,setEmail] = useState('')
     const [paswd,setPaswd] = useState('')
@@ -50,6 +57,11 @@ const Login = () => {
         try{
 
         const user = await signInWithEmailAndPassword(auth,email,paswd)
+        .then((response)=>{
+            navigate('/home')
+
+            sessionStorage.setItem('Auth Token',response._tokenResponse.refreshToken)
+        })
         console.log(user);
         } catch(error){
             displayError(error);
@@ -57,9 +69,13 @@ const Login = () => {
 
     }
 
+    
+
 
   return (
     <Container className=''>
+                <Routes exact path='/Signup' element={<Signup/>}/>
+
         <Row className='d-flex justify-content-center mt-lg-5 m-lg-5'>
             <Col sm={12} md={6} lg={6} className='yellow-side mt-lg-5 '>
                 <div className='d-flex justify-content-center mt-5 '>
@@ -82,16 +98,16 @@ const Login = () => {
                 </div>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label className='login-text'>Username</Form.Label>
-                        <Form.Control onChange={(event)=>{setEmail(event.target.value)}} id='input1' className='login-text' type="email" placeholder="Enter email" />
+                        <Form.Label id='login-text1'>Username</Form.Label>
+                        <Form.Control onChange={(event)=>{setEmail(event.target.value)}}  className='login-text' type="email" placeholder="Enter email" />
                         
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label className='login-text'>Password</Form.Label>
-                        <Form.Control onChange={(event)=>{setPaswd(event.target.value)}} id='input2' className='login-text' type="password" placeholder="Password" />
+                        <Form.Label id='login-text2'>Password</Form.Label>
+                        <Form.Control onChange={(event)=>{setPaswd(event.target.value)}}  className='login-text' type="password" placeholder="Password" />
                     </Form.Group>
-                    <a id='small-text2' className='small-text2' href='/signup'>Not registered yet? Create an Account</a> <br/>
+                    <Link to='/Signup' id='small-text2' className='small-text2' href='/signup'>Not registered yet? Create an Account</Link> <br/>
 
                     <Form.Text  className="error ">
                         {error} 

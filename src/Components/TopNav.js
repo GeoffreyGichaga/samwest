@@ -46,9 +46,7 @@ const TopNav = () => {
 
                     <div className=' ms-5 d-flex justify-content-end'>
 
-                    <NavLink className='login-reg' to='/login' exact>
-                      Login / Register
-                    </NavLink>
+                    
                 
                     </div>
 
