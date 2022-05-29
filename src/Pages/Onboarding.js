@@ -11,8 +11,8 @@ const Onboarding = () => {
         <Navbar bg="black" variant="dark">
             <Container>
             <Nav className="ms-auto">
-            <Nav.Link href="#features">Login</Nav.Link>
-            <Nav.Link href="#pricing">Register</Nav.Link>
+            <Nav.Link id='navlinks' href="#features">Login</Nav.Link>
+            <Nav.Link id='navlinks2' href="#pricing">Register</Nav.Link>
             </Nav>
             </Container>
         </Navbar>
