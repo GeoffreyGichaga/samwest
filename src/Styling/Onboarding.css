@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+body{
+    background-color: whitesmoke;
+}
+
+.left-col{
+    background-color: #ffd233;
+
+}
+.navbrand{
+    font-family: 'Montserrat', sans-serif;
+
+}
+#logo
+{
+    width: 20%;
+}
+.logoName{
+    font-family: 'Nunito', sans-serif;   
+
+
+}
+#image1{
+    width: 100%;
+}
+.site-name{
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+li{
+    font-family: 'Nunito', sans-serif;   
+
+
+}
+
+#start-btn{
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Nunito', sans-serif;   
+
+}
