@@ -17,6 +17,8 @@ body{
 #navlinks,#navlinks2{
     font-family: 'Nunito', sans-serif;   
     color: white;
+    text-decoration: none;
+    padding-right: 10px;
 
 
 }

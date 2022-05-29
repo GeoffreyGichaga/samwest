@@ -1,22 +1,39 @@
 import './App.css';
-import Home from './Pages/Home';
-import Loginpage from './Pages/Login'
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import Onboarding from './Pages/Onboarding';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
+
 
 
 function App() {
+  
   return (
-    <Router>
-      <Switch>
-        <Route path='/'>
-          <Onboarding/>
-        </Route>
+
+
+    <BrowserRouter>
+      <Routes> 
+        <Route exact path='*' element={<Onboarding/>}/>
+        <Route exact path='/Login' element={<Login/>}/>
+        <Route exact path='/Signup' element={<Signup/>}/>
+          
+        
+        
+
+
 
         
-      </Switch>
-      
-    </Router>
+
+
+
+        
+      </Routes>
+    </BrowserRouter>
+    
+
+    
+    
+    
   );
 }
 

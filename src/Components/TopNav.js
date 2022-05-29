@@ -1,11 +1,8 @@
 import React from 'react'
-import { Container,Nav, Navbar,Form,FormControl, Row, Col, Button } from 'react-bootstrap'
+import { Container,Nav, Navbar,Form,FormControl, Row, Col, Button, NavLink } from 'react-bootstrap'
 import logo from '../assets/logo.png'
-import shoppingcart from '../assets/shoppingcart.png'
 import '../Styling/Navbars.css'
-import { SearchIcon, UserIcon } from './icons'
-import SecondNav from './SecondNav'
-import { NavLink } from 'react-router-dom'
+import { SearchIcon } from './icons'
 
 
 const TopNav = () => {

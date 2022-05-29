@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Card, Col, Row,Form,Button, Alert } from 'react-bootstrap'
+import { Container, Col, Row,Form,Button, Alert } from 'react-bootstrap'
 import '../Styling/Login.css'
 import logisticslogo from '../assets/logisticslogo.png'
 import { AuthErrorCodes, signInWithEmailAndPassword } from 'firebase/auth'

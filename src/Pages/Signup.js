@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import { Container,Col, Row,Form,Button,Alert } from 'react-bootstrap'
 import '../Styling/Signup.css'
 import logisticslogo2 from '../assets/logisticslogo2.png'
-import {AuthErrorCodes, createUserWithEmailAndPassword,onAuthStateChanged} from 'firebase/auth'
+import {AuthErrorCodes, createUserWithEmailAndPassword} from 'firebase/auth'
 import {auth} from './Firebase'
-import { BrowserRouter as Route, Switch, Router } from 'react-router-dom'
 
 const Signup = () => {
     // const [userFullname,setUserFullname] = useState('')
@@ -27,9 +26,13 @@ const Signup = () => {
         try{
 
         const user = await createUserWithEmailAndPassword(auth,userEmail,userPaswd)
+        console.log(user);
         } catch(error){
             alert(error.message);
+            
         }
+
+        
 
     }
 

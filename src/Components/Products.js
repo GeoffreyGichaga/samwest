@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import { CardGroup, Container } from 'react-bootstrap'
 import Item from './Item'
-import Commerce from '@chec/commerce.js';
 import pembe from '../assets/pembe.jpg'
 import elianto from '../assets/elianto.png'
 import rice from '../assets/rice.png'
