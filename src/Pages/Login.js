@@ -3,10 +3,9 @@ import { Container, Col, Row,Form,Button, Alert } from 'react-bootstrap'
 import '../Styling/Login.css'
 import logisticslogo from '../assets/logisticslogo.png'
 import { AuthErrorCodes, signInWithEmailAndPassword } from 'firebase/auth'
-import {auth,fire} from './Firebase'
-import { Link, Route, Routes, useNavigate } from 'react-router-dom'
+import {auth} from './Firebase'
+import { Link, Routes, useNavigate } from 'react-router-dom'
 import Signup from './Signup'
-import Home from './Home'
 
 const Login = () => {
     const navigate = useNavigate()

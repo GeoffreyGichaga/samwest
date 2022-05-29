@@ -1,109 +1,129 @@
 import React, { useState } from 'react'
-import { Container,Nav, Row, Col, Navbar, Button, FormControl, Form,Tab,Offcanvas } from 'react-bootstrap'
-import shoppingcart from '../assets/shoppingcart.png'
-import { NavIcon, SearchIcon } from './icons'
+import { Nav,Navbar, Button, Offcanvas } from 'react-bootstrap'
+import { NavIcon } from './icons'
 
 
+import shopcart from '../assets/shoppingcart.png'
+import orders from '../assets/shoppingbag.png'
+import email from '../assets/email.png'
+import discount from '../assets/discount.png'
+import heart1 from '../assets/heart1.png'
+import question from '../assets/question.png'
 
-const SecondNav = ({openSideNav}) => {
+
+const SecondNav = ({handleLogout}) => {
   const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  function handleLogoutBtn(){
+    handleLogout()
+  }
+
+
   
   
   return (
     <>
-      <Navbar  bg='black'>
-        <Nav.Item className='d-flex'>
-          <div >
-          <Button onClick={handleShow} id='sideNav'>
-            <NavIcon/>
-            Menu
-          </Button>
+      <Navbar bg='black'>
 
-          </div>
+        <Navbar.Offcanvas
+            id='offcanvasNavbar'
+            aria-labelledby='offcanvasNavbarLabel-expand-lg'
+            placement="start"
+            show={show}
+            onHide={handleClose}
+            
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title className='mt-5 mb-2' id='offcanvasNavbarLabel-expand-lg'>
+                Menu
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-3 mb-5">
+                
+                <Nav.Item className='mb-3'>
+                  <Nav.Link  id='side-links' eventKey="third">
+                    <span><img className='logo-img mx-3' src={shopcart} alt='logo'/></span>
+                    Shop
+                    </Nav.Link>
+                </Nav.Item>
 
-        </Nav.Item>
+                <Nav.Item className='mb-3'>
+                  <Nav.Link  id='side-links' eventKey="third">
+                    <span><img className='logo-img mx-3' src={orders} alt='logo'/></span>
+                    Orders
+                    </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item className='mb-3'>
+                  <Nav.Link  id='side-links' eventKey="third">
+                    <span><img className='logo-img mx-3' src={email} alt='logo'/></span>
+                    Inbox
+                    </Nav.Link>
+                </Nav.Item>
+
+
+                <Nav.Item className='mb-3'>
+                  <Nav.Link  id='side-links' eventKey="third">
+                    <span><img className='logo-img mx-3' src={discount} alt='logo'/></span>
+                    Offers
+                    </Nav.Link>
+                </Nav.Item>
+
+
+                <Nav.Item className='mb-3'>
+                  <Nav.Link  id='side-links' eventKey="third">
+                    <span><img className='logo-img mx-3' src={heart1} alt='logo'/></span>
+                    Saved Items
+                    </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item className='mb-3'>
+                  <Nav.Link  id='side-links' eventKey="third">
+                    <span><img className='logo-img mx-3' src={question} alt='logo'/></span>
+                    Help
+                    </Nav.Link>
+                </Nav.Item>
+                
+              </Nav>
+              <div className='d-flex justify-content-center'>
+                <Button onClick={handleLogoutBtn}>Logout</Button>
+              </div>
+              
+            </Offcanvas.Body>
+        </Navbar.Offcanvas>
+        
 
 
         
 
-      <Offcanvas id='offcanvas' show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Categories</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                <Row>
-                    <Col sm={3} lg={12}>
-                    <Nav variant="pills" className="flex-column">
-                        <Nav.Item>
-                            <Nav.Link id='side-links' eventKey="first">Food</Nav.Link>
-                        </Nav.Item>
-
-                        <Nav.Item>
-                            <Nav.Link className='side-links' eventKey="second">Drinks</Nav.Link>
-                        </Nav.Item>
-
-                        <Nav.Item>
-                            <Nav.Link className='side-links' eventKey="third">Personal Care</Nav.Link>
-                        </Nav.Item>
-
-                        <Nav.Item>
-                            <Nav.Link className='side-links' eventKey="fourth">Detergents</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                    </Col>
-                    <Col sm={9}>
-                    <Tab.Content>
-                        <Tab.Pane eventKey="first">
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="second">
-                        </Tab.Pane>
-                    </Tab.Content>
-                    </Col>
-                </Row>
-            </Tab.Container>
-        </Offcanvas.Body>
-      </Offcanvas>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <Nav.Item>
-          <Nav.Link className='whitelinks' href="/home">Home</Nav.Link>
+          <Button onClick={handleShow} id='menubtn'>
+            <NavIcon  />
+          </Button>
         </Nav.Item>
 
         <Nav.Item>
-          <Nav.Link className='whitelinks' href="/home">About </Nav.Link>
+          <Nav.Link id='side-links' href="/home">Home</Nav.Link>
+        </Nav.Item>
+
+        <Nav.Item>
+          <Nav.Link id='side-links1' href="/home">About </Nav.Link>
         </Nav.Item>
 
 
         <Nav.Item>
-          <Nav.Link className='whitelinks' href="/home">Contact</Nav.Link>
+          <Nav.Link id='side-links2' href="/home">Contact</Nav.Link>
+        </Nav.Item>
+        
+        <Nav.Item>
+          <Nav.Link id='side-links3' eventKey="link-3">Cart</Nav.Link>
+
         </Nav.Item>
 
         

@@ -3,7 +3,6 @@ import Onboarding from './Pages/Onboarding';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
-import Auth from './Auth';
 import Home from './Pages/Home';
 
 

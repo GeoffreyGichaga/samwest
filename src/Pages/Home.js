@@ -1,27 +1,32 @@
 import React, { useEffect } from 'react'
 import Brands from '../Components/Brands';
-// import CarouselItem from '../Components/Carousel';
 import CoProfile from '../Components/CoProfile';
 import Products from '../Components/Products';
 import TopNav from '../Components/TopNav';
 import Footer from '../Components/Footer'
 
-import CarouselItem from '../Components/Carousel'
+import CarouselItem from '../Components/HeroSection'
 import SecondNav from '../Components/SecondNav';
 import { useNavigate } from 'react-router-dom';
-import { Alert } from 'react-bootstrap';
+import { Alert} from 'react-bootstrap';
+
+import '../Styling/SideMenu.css'
 
 
 
 
 
 
- const Home = () => {
+
+ const Home = ({handleLogout}) => {
    const navigate = useNavigate()
 
-   function logout(){
-     sessionStorage.removeItem('Auth Token')
-   }
+ 
+
+  function logout(){
+    sessionStorage.removeItem('Auth Token')
+  }
+
    useEffect(()=>{
      let authToken = sessionStorage.getItem('Auth Token')
      if(authToken){
@@ -36,13 +41,13 @@ import { Alert } from 'react-bootstrap';
      }
      
 
-   },[])
+   },[navigate])
   return (
     <>
 
     <TopNav/>
     
-    <SecondNav/>
+    <SecondNav handleLogout={logout}/>
     <CarouselItem/>
     
 
@@ -55,6 +60,8 @@ import { Alert } from 'react-bootstrap';
         </div>
     <Brands/>
     <Footer/>
+
+
     
     
 
@@ -63,9 +70,9 @@ import { Alert } from 'react-bootstrap';
     
     
     
-
     </>
   )
+  
 }
 
 
