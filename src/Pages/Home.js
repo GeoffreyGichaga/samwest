@@ -52,7 +52,7 @@ import '../Styling/SideMenu.css'
     
 
     
-    <CoProfile/> 
+    {/* <CoProfile/>  */}
     <Products/> 
     
     <div className='mt-5 ms-5'>
