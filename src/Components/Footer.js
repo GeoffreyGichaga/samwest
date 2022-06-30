@@ -1,10 +1,8 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import '../Styling/Footer.css'
-import logistics from '../assets/logistics.png'
-import location from '../assets/location.png'
-import email from '../assets/email.png'
-import telephone from '../assets/telephone.png'
+
+import pyramids from '../assets/pyramids.png'
 
 
 
@@ -15,7 +13,7 @@ const Footer = () => {
 
             <Col className='mt-5'>
             <Row className='d-flex justify-content-center'>
-                <img className='w-25' src={logistics} alt='Logo'/>
+                <img className='w-25' src={pyramids} alt='Logo'/>
             </Row>
             <h4 className='logo-name text-center'>SamWest Distributors</h4>
             </Col>

@@ -6,23 +6,28 @@ import heart1 from '../assets/heart1.png'
 import heart2 from '../assets/heart2.png'
 
 
-const Item = ({picture,productName,price}) => {
+const Item = ({picture,productName,price,saveItem,addToCart}) => {
     const [like,setLike] = useState(heart1)
 
-    function handleLikeBtn(){
+    function handleLikeBtn(id){
         if(like===heart1)
         {
             setLike(heart2)
+            saveItem(id)
 
         }else{ setLike(heart1)}
         
-  
+    }
+
+    function handleAddToCart(id){
+        addToCart(id)
+
     }
   return (
-        <Card className='card col-sm-12  card mt-5 ms-5'>
-            <Card.Img className='item-images ms-5 mt-3 w-50' variant="top" src={picture} />
+        <Card className='card col-sm-12 col-lg-5 card mt-5 ms-5 w-75'>
+            <Card.Img className='item-images ms-5 mt-3 w-25 d-flex justify-content-center' variant="top" src={picture} />
             <Card.Body>
-                <Card.Title className='card-text1 mt-3'>{productName}</Card.Title>
+                <Card.Title className='card-text1 mt-3 h4'>{productName}</Card.Title>
                 <Card.Text className='card-text2'>
                     <p>Ksh {price}</p>
                     <p>Eligible for free delivery for orders above 12 Packs in Nairobi, Kiambu, and Kajiado </p>
@@ -30,7 +35,7 @@ const Item = ({picture,productName,price}) => {
                 </Card.Text>
                 <div className='mt-3'>
                     <img onClick={handleLikeBtn} className='heart-icons' src={like} alt='like'/>
-                    <Button className='add-to-cart  ms-4'>Add to Cart</Button>
+                    <Button onClick={handleAddToCart} className='add-to-cart  ms-4'>Add to Cart</Button>
                 </div>
             </Card.Body>
             

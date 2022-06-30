@@ -1,22 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
 
 
 body{
     background-color: whitesmoke;
 }
 
-.left-col{
-    background-color: #ffd233;
 
-}
 .navbrand{
     font-family: 'Montserrat', sans-serif;
 
 }
-#navlinks,#navlinks2{
+.slogan-title{
+    font-family: 'Kanit', sans-serif;    
+    font-weight: bold;
+    font-size: 50px;
+}
+#navlinks,#navlinks2,#navlinks3,#navlinks4{
     font-family: 'Nunito', sans-serif;   
-    color: white;
+    color: black;
     text-decoration: none;
     padding-right: 10px;
 
