@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CardGroup, Col, Container,Row } from 'react-bootstrap'
 import Item from './Item';
-import Commerce from '@chec/commerce.js';
 
 
 
@@ -13,27 +12,11 @@ const Products = () => {
 
 
   const [Items,setItems] = useState([])
-  const url = new URL("https://api.chec.io/v1/products");
   
-  
-
-
-    let params = {
-        "limit": "6",
-    };
-    Object.keys(params)
-     .forEach(key => url.searchParams.append(key, params[key]));
-
-    let headers = {
-        "X-Authorization": "pk_43657a047d76d9d4ec214546fdb52cad08565284565a9",
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-    };
 
     useEffect(()=>{
-      fetch(url, {
+      fetch("https://samwest-server.herokuapp.com/shop", {
         method: "GET",
-        headers: headers,
     })
     .then(response => response.json())
     .then(dataItems => {setItems(dataItems.data)})

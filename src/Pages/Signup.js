@@ -28,7 +28,7 @@ const Signup = () => {
       <Routes path='/home' element={<Home/>}/>
 
       const registerUsers = ()=>{
-        fetch('http://localhost:9292/signup',{
+        fetch('https://samwest-server.herokuapp.com/signup',{
             method:"POST",
             headers:{
               "content-Type":"application/json"
