@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import Brands from '../Components/Brands';
-import CoProfile from '../Components/CoProfile';
 import Products from '../Components/Products';
 import TopNav from '../Components/TopNav';
-import Footer from '../Components/Footer'
+import Footer from '../Components/Footer';
 
 import CarouselItem from '../Components/HeroSection'
 import SecondNav from '../Components/SecondNav';

@@ -1,6 +1,15 @@
 import React, { useState } from 'react'
 import { Nav,Navbar, Button, Offcanvas } from 'react-bootstrap'
 import { NavIcon } from './icons'
+import { useNavigate } from 'react-router-dom'
+import Shop from '../Pages/Shop' 
+import Orders from '../Pages/Orders'
+import Inbox from '../Pages/Inbox'
+import Offers from '../Pages/Offers'
+import SavedItems from '../Pages/SavedItems'
+import Help from '../Pages/Help'
+
+
 
 
 import shopcart from '../assets/shoppingcart.png'
@@ -9,10 +18,13 @@ import email from '../assets/email.png'
 import discount from '../assets/discount.png'
 import heart1 from '../assets/heart1.png'
 import question from '../assets/question.png'
+import { Routes } from 'react-router-dom'
 
 
 const SecondNav = ({handleLogout}) => {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate()
+
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -21,12 +33,23 @@ const SecondNav = ({handleLogout}) => {
     handleLogout()
   }
 
+  
+
+
 
   
   
   return (
     <>
+    <Routes path='/shop' element={<Shop/>}/>
+    <Routes path='/orders' element={<Orders/>}/>
+    <Routes path='/inbox' element={<Inbox/>}/>
+    <Routes path='/offers' element={<Offers/>}/>
+    <Routes path='/savedItems' element={<SavedItems/>}/>
+    <Routes path='/help' element={<Help/>}/>
+    
       <Navbar bg='black'>
+
 
         <Navbar.Offcanvas
             id='offcanvasNavbar'
@@ -45,21 +68,21 @@ const SecondNav = ({handleLogout}) => {
               <Nav className="justify-content-end flex-grow-1 pe-3 mb-5">
                 
                 <Nav.Item className='mb-3'>
-                  <Nav.Link  id='side-links' eventKey="third">
+                  <Nav.Link onClick={()=>navigate('/shop')} id='side-links' eventKey="third">
                     <span><img className='logo-img mx-3' src={shopcart} alt='logo'/></span>
                     Shop
                     </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item className='mb-3'>
-                  <Nav.Link  id='side-links' eventKey="third">
+                  <Nav.Link onClick={()=>navigate('/orders')} id='side-links' eventKey="third">
                     <span><img className='logo-img mx-3' src={orders} alt='logo'/></span>
                     Orders
                     </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item className='mb-3'>
-                  <Nav.Link  id='side-links' eventKey="third">
+                  <Nav.Link onClick={()=>navigate('/inbox')}  id='side-links' eventKey="third">
                     <span><img className='logo-img mx-3' src={email} alt='logo'/></span>
                     Inbox
                     </Nav.Link>
@@ -67,7 +90,7 @@ const SecondNav = ({handleLogout}) => {
 
 
                 <Nav.Item className='mb-3'>
-                  <Nav.Link  id='side-links' eventKey="third">
+                  <Nav.Link onClick={()=>navigate('/offers')} id='side-links' eventKey="third">
                     <span><img className='logo-img mx-3' src={discount} alt='logo'/></span>
                     Offers
                     </Nav.Link>
@@ -75,14 +98,14 @@ const SecondNav = ({handleLogout}) => {
 
 
                 <Nav.Item className='mb-3'>
-                  <Nav.Link  id='side-links' eventKey="third">
+                  <Nav.Link onClick={()=>navigate('/savedItems')} id='side-links' eventKey="third">
                     <span><img className='logo-img mx-3' src={heart1} alt='logo'/></span>
                     Saved Items
                     </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item className='mb-3'>
-                  <Nav.Link  id='side-links' eventKey="third">
+                  <Nav.Link onClick={()=>navigate('/help')} id='side-links' eventKey="third">
                     <span><img className='logo-img mx-3' src={question} alt='logo'/></span>
                     Help
                     </Nav.Link>
