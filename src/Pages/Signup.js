@@ -41,8 +41,7 @@ const Signup = () => {
                 password : userPaswd
             })
            } )
-           .then(res=>res.json())
-           .then(resjson=>console.log(resjson))
+           .then(navigate('/home'))
            
 
         }
