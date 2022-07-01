@@ -19,7 +19,7 @@ const Products = () => {
         method: "GET",
     })
     .then(response => response.json())
-    .then(dataItems => {setItems(dataItems.data)})
+    .then(dataItems => {setItems(dataItems)})
     },[])
 
     console.log(Items);
@@ -27,7 +27,7 @@ const Products = () => {
     const displayProducts = Items.map((product)=>(
      
     <CardGroup>
-            <Item saveItem={handleSaveItem} addToCart={handleAddToCart} key={product.name} picture={product.image.url} productName={product.name} price={product.price.raw}/>
+            <Item saveItem={handleSaveItem} addToCart={handleAddToCart} key={product.product_name} picture={product.product_image} productName={product.product_name} price={product.product_price}/>
 
     </CardGroup>      
 
