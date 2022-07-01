@@ -42,7 +42,7 @@ const Signup = () => {
             })
            } )
            .then(res=>res.json())
-           .then(res_json=>displayError(res_json))
+           .then(resjson=>console.log(resjson))
            
 
         }
