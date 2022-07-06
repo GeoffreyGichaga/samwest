@@ -11,7 +11,6 @@ function SavedItem(){
         <SecondNav/>
         
 
-        <Footer/>
         </>
     )
 }

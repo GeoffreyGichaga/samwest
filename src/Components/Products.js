@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { CardGroup, Col, Container,Row } from 'react-bootstrap'
+import { CardGroup, Container,Row } from 'react-bootstrap'
 import Item from './Item';
 
 
@@ -25,11 +25,22 @@ const Products = () => {
     console.log(Items);
 
     const displayProducts = Items.map((product)=>(
-     
-    <CardGroup>
-            <Item saveItem={handleSaveItem} addToCart={handleAddToCart} key={product.product_name} picture={product.product_image} productName={product.product_name} price={product.product_price}/>
 
-    </CardGroup>      
+      <CardGroup>
+        
+          <Item saveItem={handleSaveItem} 
+          addToCart={handleAddToCart} 
+          key={product.product_name} 
+          picture={product.product_image} 
+          productName={product.product_name} 
+          price={product.product_price}
+        />
+
+
+
+      </CardGroup>
+     
+       
 
     ))
 
@@ -60,10 +71,8 @@ const Products = () => {
 
   return (
     <Container fluid className=' d-flex justify-content-center '>
-      <Row sm={12} md={1} lg={7} >
-        <Col >
+      <Row sm={12} md={1} lg={4} >
           {displayProducts}
-        </Col>
       </Row>
       
        

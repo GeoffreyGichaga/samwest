@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+
+.ft-title{
+    font-family: 'Nunito', sans-serif;   
+
+
+}
+
+.featured-bar{
+    background-color: #ffd233;
+    border-radius: 5px;
+}

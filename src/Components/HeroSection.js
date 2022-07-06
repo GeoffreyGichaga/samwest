@@ -26,8 +26,17 @@ const CarouselItem = ()=>{
                         <Nav.Link id='tablink3' eventKey="fourth">Stationeries</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className='tabs-nav mb-4'>
-                        <Nav.Link id='tablink4' eventKey="fifth">Animal Products</Nav.Link>
+                        <Nav.Link id='tablink5' eventKey="fifth">Animal Products</Nav.Link>
                     </Nav.Item>
+
+                    <Nav.Item className='tabs-nav mb-4'>
+                        <Nav.Link id='tablink6' eventKey="sixth">Fashion</Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item className='tabs-nav mb-4'>
+                        <Nav.Link id='tablink7' eventKey="seventh">Computing</Nav.Link>
+                    </Nav.Item>
+                    
                 </Nav>
                 </Col>
 

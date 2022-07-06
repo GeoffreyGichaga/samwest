@@ -17,7 +17,6 @@ function Orders(){
         <SecondNav/>
         <OrderHero/>
 
-        <Footer/>
         </>
     )
 }

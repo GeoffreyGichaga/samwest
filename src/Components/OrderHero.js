@@ -13,12 +13,12 @@ function OrderHero(){
         <Row>
             <Col sm={12} md={6} lg={2} className='order-brief mt-4 '>
                 <h3 className='order-title'>Orders</h3>
-                hello
+                All Orders
             </Col>
 
             <Col sm={12} md={6} lg={8} className='order-desc ms-2'>
                 <h3 className='order-title mt-4'>Products</h3>
-                helo
+                Order Details
 
             </Col>
 

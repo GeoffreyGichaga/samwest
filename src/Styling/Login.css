@@ -5,6 +5,9 @@
     height: 50%;
 }
 
+#image1{
+    width: 42rem;
+}
 .logo{
     width: 30%;
 }
@@ -18,6 +21,13 @@
     color: black;   
 }
 
+#input1,#input2{
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+    font-size: 13px;
+}
+
 .small-text{
     font-size: 10px;
     font-family: 'Nunito', sans-serif;   
@@ -27,7 +37,7 @@
 
 }
 #small-text2{
-    font-size: 10px;
+    font-size: 15px;
     font-family: 'Nunito', sans-serif; 
     font-weight: bold;  
     text-decoration: none;

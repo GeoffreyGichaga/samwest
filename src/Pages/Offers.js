@@ -11,7 +11,6 @@ function Offers(){
         <SecondNav/>
         
 
-        <Footer/>
         </>
     )
 }

@@ -24,8 +24,8 @@ const Item = ({picture,productName,price,saveItem,addToCart}) => {
 
     }
   return (
-        <Card className='card col-sm-12 col-lg-5 card mt-5 ms-5 w-75'>
-            <Card.Img className='item-images ms-5 mt-3 w-25 d-flex justify-content-center' variant="top" src={picture} />
+        <Card className='card mt-5 ms-5 w-75'>
+            <Card.Img className='item-images ms-5 mt-3 w-25 ' variant="top" src={picture} />
             <Card.Body>
                 <Card.Title className='card-text1 mt-3 h4'>{productName}</Card.Title>
                 <Card.Text className='card-text2'>
