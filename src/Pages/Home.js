@@ -7,7 +7,7 @@ import Footer from '../Components/Footer';
 import CarouselItem from '../Components/HeroSection'
 import SecondNav from '../Components/SecondNav';
 import { useNavigate } from 'react-router-dom';
-import { Alert} from 'react-bootstrap';
+import { Alert, Container, Row} from 'react-bootstrap';
 
 import '../Styling/SideMenu.css'
 
@@ -48,6 +48,12 @@ import '../Styling/SideMenu.css'
     
     <SecondNav handleLogout={logout}/>
     <CarouselItem/>
+
+    <Container className='mt-4'>
+            <Row className='featured-bar'>
+                <h4 className='ft-title mt-2'>Featured Products</h4>
+            </Row>
+    </Container>
     
 
     

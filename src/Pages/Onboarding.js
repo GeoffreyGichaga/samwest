@@ -65,8 +65,8 @@ const Onboarding = () => {
 
 
         <Container className='mt-5'>
-            <Row>
-                <Col sm={12} md={6} lg={6} className='left-col start mt-3'>
+            <Row className='d-flex'>
+                <Col sm={12} md={6} lg={6} className='left-col  mt-3'>
                     <h3 className='slogan-title'>East or West,</h3>
                     <h3 className='slogan-title'>SamWest is the Best!</h3>
                     
@@ -83,8 +83,8 @@ const Onboarding = () => {
                     </div>
 
                 </Col>
-                <Col>
-                <img id='image1' className='mt-5 mb-4' src={hero} alt='Logo'/>
+                <Col sm={12} md={6} lg={6}>
+                    <img id='hero-image' className='mt-5 mb-4' src={hero} alt='Logo'/>
                 </Col>
             </Row>
         </Container>

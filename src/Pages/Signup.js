@@ -91,7 +91,7 @@ const Signup = () => {
 
         <Row className='d-flex justify-content-center mt-lg-5 m-lg-5'>
             <Col sm={12} md={6} lg={6} className='black-side mt-lg-5 '>
-                <img id='image1' className='mt-5 mb-4' src={hero} alt='Logo'/>
+                <img id='logo-hero' className='mt-5 mb-4' src={hero} alt='Logo'/>
 
             </Col>
             

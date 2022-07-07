@@ -7,6 +7,10 @@
 .logo{
     width: 30%;
 }
+
+#logo-hero{
+    width: 100%;
+}
 .login-main{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;

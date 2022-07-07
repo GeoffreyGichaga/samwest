@@ -71,7 +71,7 @@ const Products = () => {
 
   return (
     <Container fluid className=' d-flex justify-content-center '>
-      <Row sm={12} md={1} lg={4} >
+      <Row sm={12} md={6} lg={3} >
           {displayProducts}
       </Row>
       
